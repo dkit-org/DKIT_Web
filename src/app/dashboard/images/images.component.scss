@@ -1,0 +1,23 @@
+@import "src/styles";
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.images{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+}
+
+.image{
+  padding: 10px;
+  box-shadow: $shadow01;
+  border-radius: $radius-sm;
+
+  &:hover{
+    background-color: var(--primary-50);
+  }
+}

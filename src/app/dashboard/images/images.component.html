@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="search">
+    <input type="text" pInputText>
+  </div>
+
+  <div class="images"  *ngIf="$images | async as images">
+    <!-- TODO: define pipe to extract the logic from the html template-->
+    <div class="image"  *ngFor="let image of images">
+      {{image.RepoTags && image.RepoTags.length > 0 ? image.RepoTags[0].split(':')[0] : 'No Image Tag'}}
+    </div>
+  </div>
+</div>
+
+
+
